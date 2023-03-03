@@ -1,3 +1,7 @@
+import pytest
+import pytest_regressions
+
+
 def get_student():
     """Returns an object repesenting a student"""
     return {
@@ -20,4 +24,4 @@ def get_student():
 
 def test_regression_student(data_regression):
     """Checks that get_student methods returns the same object structure"""
-    assert False
+    data_regression.check(get_student())
