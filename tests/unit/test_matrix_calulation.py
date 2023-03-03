@@ -50,12 +50,25 @@ class TestMatrixCalculation:
 
     def test_add(self, identity_matrix_3x3, ones_3x3):
         """Tests add function"""
-        assert False
+
+        for i in range(len(identity_matrix_3x3)):
+            for j in range(len(identity_matrix_3x3[i])):
+                assert (
+                    identity_matrix_3x3[i][j] + ones_3x3[i][j]
+                    == add(identity_matrix_3x3, ones_3x3)[i][j]
+                )
 
     def test_matmul(self, identity_matrix_3x3):
         """Tests  matmul function"""
-        assert False
+        for i in range(len(identity_matrix_3x3)):
+            for j in range(len(identity_matrix_3x3[i])):
+                assert (
+                    identity_matrix_3x3[i][j] * identity_matrix_3x3[i][j]
+                    == mat_mul(identity_matrix_3x3, identity_matrix_3x3)[i][j]
+                )
 
     def test_identity(self, identity_matrix_3x3):
         """Tests identity function"""
-        assert False
+        for i in range(len(identity_matrix_3x3)):
+            for j in range(len(identity_matrix_3x3[i])):
+                assert identity_matrix_3x3[i][j] == identity(3)[i][j]
