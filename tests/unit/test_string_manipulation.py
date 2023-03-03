@@ -45,7 +45,7 @@ def test_raises_exception_on_non_string_arguments_upper_case():
         upper_case(1)
     except TypeError:
         assert True
-    except Exception:
+    else:
         assert False
 
 
@@ -55,5 +55,5 @@ def test_raises_exception_on_non_string_arguments_lower_case():
         lower_case(1)
     except TypeError:
         assert True
-    except Exception:
+    else:
         assert False
