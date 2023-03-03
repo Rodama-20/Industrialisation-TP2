@@ -12,12 +12,12 @@ from src.string_manipulation import lower_case, upper_case, invert
 
 def test_lower_case():
     """Tests lower_case function"""
-    assert False
+    assert "abc" == lower_case("ABC")
 
 
 def test_invert():
     """Tests invert function"""
-    assert False
+    assert "cba" == invert("abc")
 
 
 # NOTE: La fixture "parametrize" de pytest permet de réaliser
@@ -36,14 +36,24 @@ def test_invert():
 )
 def test_upper_case(input_string, expected_output):
     """Tests upper_case function"""
-    assert False
+    assert expected_output == upper_case(input_string)
 
 
 def test_raises_exception_on_non_string_arguments_upper_case():
     """Tests that upper_case function raises a TypeError when its input is not a string"""
-    assert False
+    try:
+        upper_case(1)
+    except TypeError:
+        assert True
+    except Exception:
+        assert False
 
 
 def test_raises_exception_on_non_string_arguments_lower_case():
     """Tests that capital_case function raises a TypeError when its input is not a string"""
-    assert False
+    try:
+        lower_case(1)
+    except TypeError:
+        assert True
+    except Exception:
+        assert False
