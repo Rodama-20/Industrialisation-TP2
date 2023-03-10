@@ -23,21 +23,42 @@ class TestSeleniumFunctional:
         """Opens the He-Arc website and prints the list of teachers from the 'Analyse de données' competence group."""
 
         # Loads Geckodriver
-        # browser = webdriver.Firefox(
-        #    service=Service(executable_path=GeckoDriverManager().install())
-        # )
+        browser = webdriver.Firefox(
+            service=Service(executable_path=GeckoDriverManager().install())
+        )
 
         # Opens HE-Arc website.
-        # browser.get("https://www.he-arc.ch")
+        browser.get("https://www.he-arc.ch")
 
         # Accept cookies
-        # cookies_button = browser.find_element(By.ID, "axeptio_btn_acceptAll")
-        # cookies_button.click()
+        cookies_button = browser.find_element(By.ID, "axeptio_btn_acceptAll")
+        cookies_button.click()
 
         ##### YOUR CODE HERE #####
+
+        ra_d_button = browser.find_element(By.ID, "w-dropdown-toggle-3")
+        ra_d_button.click()
+
+        competence_button = browser.find_element(
+            By.LINK_TEXT, "Domaines de compétences"
+        )
+        competence_button.click()
+
+        engineering_button = browser.find_element(
+            By.ID, "accordion-block_619259e970051"
+        )
+        engineering_button.click()
+
+        data_analysis_button = browser.find_element(
+            By.PARTIAL_LINK_TEXT, "Analyse de données"
+        )
+        data_analysis_button.click()
+
+        professors = browser.find_elements(By.CLASS_NAME, "cta-card__title")
+        for prof in professors:
+            print(prof.text)
 
         ##########################
 
         # Close Geckodriver
-        # browser.quit()
-        assert False
+        browser.quit()

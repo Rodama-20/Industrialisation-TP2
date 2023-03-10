@@ -16,7 +16,7 @@ def array_filling_2():
     print("Array created successfully")
 
 
-# TODO: Implémenter la méthode main.
+# : Implémenter la méthode main.
 # - Démarrer le profilage de CProfile
 # - Appeler les 2 méthodes array_filling_<n>
 # - Stopper le profilage
@@ -24,7 +24,13 @@ def array_filling_2():
 # - Afficher les résultats dans la console.
 def main():
     """Main function"""
-    pass
+    profiler = cProfile.Profile()
+    profiler.enable()
+    array_filling_1()
+    array_filling_2()
+    profiler.disable()
+
+    profiler.print_stats(pstats.SortKey("ncalls"))
 
 
 # NOTE

@@ -18,6 +18,11 @@ def get_student():
             {"courseId": 0, "courseName": "Math", "mark": 6.0},
             {"courseId": 0, "courseName": "Math", "mark": 3.8},
             {"courseId": 1, "courseName": "Physics", "mark": 5.1},
+            {
+                "courseId": 1,
+                "courseName": "Physics",
+                "mark": 5.5,
+            },  # update by using pytest --force-regen
         ],
     }
 

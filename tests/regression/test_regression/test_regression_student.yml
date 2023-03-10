@@ -15,4 +15,7 @@ grades:
 - courseId: 1
   courseName: Physics
   mark: 5.1
+- courseId: 1
+  courseName: Physics
+  mark: 5.5
 lastName: Johnson
