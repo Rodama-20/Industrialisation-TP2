@@ -30,3 +30,13 @@ def get_student():
 def test_regression_student(data_regression):
     """Checks that get_student methods returns the same object structure"""
     data_regression.check(get_student())
+
+    """
+    La première execution n'a pas de référence, elle échoue mais crée la référence. Le test suivant réussi.
+    Le test opéré est donc la comparaison entre une référence et l'object obtenu depuis la méthode testée
+
+    La valeur de retour de la fonction est différente après le changement.
+    Si cette valeur doit être la nouvelle référence il faut lancer pytest comme suit:
+    pytest --force-regen
+    le teste échoue à nouveau mais la référence est mise à jour et l'execution suivant réussira
+    """
