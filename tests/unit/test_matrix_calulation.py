@@ -46,7 +46,7 @@ class TestMatrixCalculation:
         """Called after each unit test of this class"""
         print("\n--> Teardown method")
 
-    # TODO: implémenter les 3 tests ci-dessous
+    # implémenter les 3 tests ci-dessous
 
     def test_add(self, identity_matrix_3x3, ones_3x3):
         """Tests add function"""

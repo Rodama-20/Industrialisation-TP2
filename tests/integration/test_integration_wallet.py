@@ -4,7 +4,7 @@ from tests.fixtures.wallet_fixtures import empty_wallet, wallet_with_50_balance
 from src.wallet import Wallet, InsufficientAmount
 
 
-# TODO: Implémenter la fonction de test test_deferred_payment
+# Implémenter la fonction de test test_deferred_payment
 # Transférer 20 de wallet_with_50_balance à empty_wallet
 # Faire un paiement de 10 avec empty_wallet
 # faire un paiement différé de 10 avec empty_wallet

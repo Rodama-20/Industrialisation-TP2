@@ -8,7 +8,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 class TestSeleniumFunctional:
     """Functional tests class using selenium"""
 
-    # TODO: Implémenter la méthode test_get_research_assistants qui réalise les actions suivantes:
+    # Implémenter la méthode test_get_research_assistants qui réalise les actions suivantes:
     # - Ouvrir Firefox
     # - Se rendre sur la page www.he-arc.ch
     # - Accepter les cookies

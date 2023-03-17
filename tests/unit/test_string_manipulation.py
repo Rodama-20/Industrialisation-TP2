@@ -6,7 +6,7 @@ import pytest
 from src.string_manipulation import lower_case, upper_case, invert
 
 
-# TODO: Implémenter les tests unitaires ci-dessous.
+# Implémenter les tests unitaires ci-dessous.
 #       Les noms des méthodes indiquent ce qu'il faut tester.
 
 
