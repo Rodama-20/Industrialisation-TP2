@@ -32,11 +32,6 @@ def main():
 
     profiler.print_stats(pstats.SortKey("ncalls"))
 
-    """
-    Les temps d'execution des fonctions sont différents,
-    la fonction faisant appel à append va bien plus modifier la list que celle qui la construit en 1 fois depuis le range
-    """
-
 
 # NOTE
 # contrairement aux autres exercices, ici pour tester vous pouvez

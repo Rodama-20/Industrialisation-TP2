@@ -1,3 +1,4 @@
+from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
@@ -54,7 +55,10 @@ class TestSeleniumFunctional:
         )
         data_analysis_button.click()
 
-        professors = browser.find_elements(By.CLASS_NAME, "cta-card__title")
+        professors = browser.find_elements(
+            By.XPATH,
+            "/html/body/main/article/section[1]/div[2]/div[1]/div/div[3]/ul[*]/li[*]/a/div[*]/h3",
+        )
         for prof in professors:
             print(prof.text)
 

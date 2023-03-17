@@ -1,14 +1,6 @@
 """Locust test package"""
 from locust import HttpUser, task
 
-"""
-4 routes sont testée, celle définie dans les test
-
-RPS: request per seconds nombre de requêtes effectuer par secondes, leur répartition depend du poids passé en paramètre du décorateur task
-
-Plus performante: la page home, logiue c'est la plus demander donc la plus optimisée en général
-"""
-
 
 class ProjectPerfTest(HttpUser):
     """Test class for Locust"""

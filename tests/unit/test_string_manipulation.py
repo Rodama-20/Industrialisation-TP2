@@ -57,3 +57,16 @@ def test_raises_exception_on_non_string_arguments_lower_case():
         assert True
     else:
         assert False
+
+
+# Ci-dessous le test a ajouté afin d'obtenir un coverage de 100%
+
+
+def test_invert_exception():
+    """Test that non string argument are rejected and raises TypeError"""
+    try:
+        invert(1)
+    except TypeError:
+        assert True
+    else:
+        assert False
